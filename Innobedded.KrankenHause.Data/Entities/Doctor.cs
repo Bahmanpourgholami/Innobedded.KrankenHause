@@ -20,10 +20,16 @@ namespace Innobedded.KrankenHause.Data.Entities
         
         public int FachID { get; set; }
 
+        public int KlinikID { get; set; }
         public string Telefon { get; set; }
 
         public string Email { get; set; }
 
+        public string Description { get; set; }
+
+        public string Picture { get; set; }
+
         public virtual Fach Fach { get; set; }
+        public virtual Klinik Klinik { get; set; }
     }
 }

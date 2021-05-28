@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class init : DbMigration
+    public partial class init_Doctors_Krank : DbMigration
     {
         public override void Up()
         {
@@ -26,10 +26,10 @@
                 "dbo.Faches",
                 c => new
                     {
-                        ID = c.Int(nullable: false, identity: true),
+                        FachID = c.Int(nullable: false, identity: true),
                         Title = c.String(),
                     })
-                .PrimaryKey(t => t.ID);
+                .PrimaryKey(t => t.FachID);
             
         }
         
