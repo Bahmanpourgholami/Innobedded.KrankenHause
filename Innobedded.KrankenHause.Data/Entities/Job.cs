@@ -12,6 +12,7 @@ namespace Innobedded.KrankenHause.Data.Entities
         [Key]
         public int JobID { get; set; }
 
+         [Display(Name ="Job Titles")]
         public string Title { get; set; }
 
         public virtual ICollection<Krank> Kranks { get; set; }

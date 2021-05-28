@@ -13,6 +13,7 @@ namespace Innobedded.KrankenHause.Data.Entities
         [Key]
         public int EduID { get; set; }
 
+        [Display(Name ="Bildung Titel")]
         public string Title { get; set; }
 
 

@@ -12,6 +12,8 @@ namespace Innobedded.KrankenHause.Data.Entities
         [Key]
         public int SexID { get; set; }
 
+
+         [Display(Name ="Geschlecht Titel")]
         public string Title { get; set; }
 
         public virtual ICollection<Krank> Kranks { get; set; }

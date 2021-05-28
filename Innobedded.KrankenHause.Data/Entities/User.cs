@@ -12,11 +12,17 @@ namespace Innobedded.KrankenHause.Data.Entities
         [Key]
         public int UserID { get; set; }
          
+         [Display(Name = "Nutzername")]
         public string UserName { get; set; }
+
+        
+             [Display(Name = "Passwort")]
         public string Password { get; set; }
 
+         [Display(Name ="vor und NachName")]
         public string NameFamily { get; set; }
 
+         [Display(Name ="Letzte Besuch")]
         public DateTime LastEnter { get; set; }
 
 

@@ -13,6 +13,8 @@ namespace Innobedded.KrankenHause.Data.Entities
         [Key]
         public int KlinikTypeID { get; set; }
 
+
+         [Display(Name ="Art Klinik")]
         public string Title { get; set; }
 
         public virtual ICollection<Klinik> Kliniks { get; set; }

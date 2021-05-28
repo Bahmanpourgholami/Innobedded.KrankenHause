@@ -14,6 +14,7 @@ namespace Innobedded.KrankenHause.Data.Entities
         [Key]
         public int FachID { get; set; }
 
+         [Display(Name ="Fach Titel")]
          public string Title { get; set; }
 
         public virtual ICollection<Doctor> Doctors { get; set; }
