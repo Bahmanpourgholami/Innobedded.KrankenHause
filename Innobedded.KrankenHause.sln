@@ -3,9 +3,44 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Access Layer", "Data Access Layer", "{6D0165CF-8DBE-4FB0-A0C7-F3F3A1EECD1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain Access Layer", "Domain Access Layer", "{1D189209-927A-446F-BEF7-786696008857}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presention Layer", "Presention Layer", "{593ED79E-0ECC-44C4-914E-19D38C4A96AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innobedded.KrankenHause.Data", "Innobedded.KrankenHause.Data\Innobedded.KrankenHause.Data.csproj", "{2AA1039F-64F5-4870-BC86-0F1B5799D44E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innobedded.KrankenHause.Domain", "Innobedded.KrankenHause.Domain\Innobedded.KrankenHause.Domain.csproj", "{265593D9-4272-4098-B12D-3C1C002C2A9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innobedded.KrankenHause.WebSite", "Innobedded.KrankenHause.WebSite\Innobedded.KrankenHause.WebSite.csproj", "{4682FB8E-AE62-450B-8B30-D72F57949F8C}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AA1039F-64F5-4870-BC86-0F1B5799D44E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AA1039F-64F5-4870-BC86-0F1B5799D44E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AA1039F-64F5-4870-BC86-0F1B5799D44E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AA1039F-64F5-4870-BC86-0F1B5799D44E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{265593D9-4272-4098-B12D-3C1C002C2A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{265593D9-4272-4098-B12D-3C1C002C2A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{265593D9-4272-4098-B12D-3C1C002C2A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{265593D9-4272-4098-B12D-3C1C002C2A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4682FB8E-AE62-450B-8B30-D72F57949F8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4682FB8E-AE62-450B-8B30-D72F57949F8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4682FB8E-AE62-450B-8B30-D72F57949F8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4682FB8E-AE62-450B-8B30-D72F57949F8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2AA1039F-64F5-4870-BC86-0F1B5799D44E} = {6D0165CF-8DBE-4FB0-A0C7-F3F3A1EECD1B}
+		{265593D9-4272-4098-B12D-3C1C002C2A9E} = {1D189209-927A-446F-BEF7-786696008857}
+		{4682FB8E-AE62-450B-8B30-D72F57949F8C} = {593ED79E-0ECC-44C4-914E-19D38C4A96AB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A7C1161-C10B-4585-A640-A9C4501290F7}
