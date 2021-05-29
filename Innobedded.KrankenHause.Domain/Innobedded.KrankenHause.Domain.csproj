@@ -52,8 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IDoctorRepository.cs" />
     <Compile Include="Repositories\IFachRepository.cs" />
     <Compile Include="Repositories\IGenericRepositoy.cs" />
+    <Compile Include="Services\DoctorRepository.cs" />
     <Compile Include="Services\FachRepository.cs" />
     <Compile Include="Services\GenericRepositoy.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
