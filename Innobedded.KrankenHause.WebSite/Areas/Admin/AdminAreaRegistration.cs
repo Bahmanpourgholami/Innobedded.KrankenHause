@@ -18,6 +18,8 @@ namespace Innobedded.KrankenHause.WebSite.Areas.Admin
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
+                //new[] { "Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers" }
+                
             );
         }
     }

@@ -14,6 +14,7 @@ namespace Innobedded.KrankenHause.Data.Entities
         public int EduID { get; set; }
 
         [Display(Name ="Bildung Titel")]
+        [Required(ErrorMessage = "Bitte Set {0} ...")]
         public string Title { get; set; }
 
 

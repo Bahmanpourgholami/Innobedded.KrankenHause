@@ -8,14 +8,15 @@ using System.Threading.Tasks;
 
 namespace Innobedded.KrankenHause.Data.Entities
 {
-   public class Fach
+    public class Fach
     {
 
         [Key]
         public int FachID { get; set; }
 
-         [Display(Name ="Fach Titel")]
-         public string Title { get; set; }
+        [Display(Name = "Fach Titel")]
+        [Required(ErrorMessage = "Bitte Set {0} ...")]
+        public string Title { get; set; }
 
         public virtual ICollection<Doctor> Doctors { get; set; }
 

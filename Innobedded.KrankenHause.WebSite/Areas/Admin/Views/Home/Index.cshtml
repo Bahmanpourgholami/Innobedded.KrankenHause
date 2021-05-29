@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Navbar-->
+
+@{
+    Html.RenderPartial("_Navbar");
+}
+<!-- Side-Nav-->
+@{
+
+    Html.RenderPartial("_SideNav");
+}
+
+<div class="content-wrapper">
+    <!-- Container-fluid starts -->
+    <!-- Main content starts -->
+    <div class="container-fluid" id="Main_Div">
+        <div class="row">
+            <div class="main-header">
+                <h4>Dashboard</h4>
+            </div>
+        </div>
+        <!-- 4-blocks row start -->
+        @*@{
+            Html.RenderPartial("_Blocks");
+        }*@
+        <!-- 4-blocks row end -->
+
+        <div id="Test">
+
+        </div>
+
+        @ViewBag.Kir
+        Alaki
+    </div>
+    <!-- Main content ends -->
+
+</div>
+
+
+
+@section js{
+
+    <script type="text/javascript">
+
+        function tt() {
+            alert("HASAN");
+
+
+            $(document).ready(function () {
+                //$.get("/admin/home/ShowBlock", function (data) {
+                $.get("/admin/faches/index", function (data) {
+                    $('#Test').html(data);
+                });
+
+            });
+        }
+    </script>
+}

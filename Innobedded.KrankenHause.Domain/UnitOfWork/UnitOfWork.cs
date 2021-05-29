@@ -23,6 +23,10 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
         }
 
         private FachRepository fachRepository;
+        private DoctorRepository doctorRepository;
+
+
+
 
         public FachRepository FachRepository { 
             get
@@ -37,6 +41,19 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
             }
                 
              }
+
+        public DoctorRepository DoctorRepository
+        {
+            get
+            {
+                if (doctorRepository == null)
+                {
+                    doctorRepository = new DoctorRepository(_maindbcontext);
+                }
+                return doctorRepository;
+            }
+        }
+
 
 
         public int Commit()

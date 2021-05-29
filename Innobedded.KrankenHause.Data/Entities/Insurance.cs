@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace Innobedded.KrankenHause.Data.Entities
 {
-   public class Insurance
+    public class Insurance
     {
         [Key]
         public int ID { get; set; }
 
-          [Display(Name ="Versicherung Titel")]
+        [Display(Name = "Versicherung Titel")]
+        [Required(ErrorMessage = "Bitte Set {0} ...")]
         public string Title { get; set; }
 
         public virtual ICollection<Krank> Kranks { get; set; }

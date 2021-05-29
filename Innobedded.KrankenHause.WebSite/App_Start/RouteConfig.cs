@@ -18,8 +18,14 @@ namespace Innobedded.KrankenHause.WebSite
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[]{ "Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers" }
+
+
             );
+
+
+
         }
     }
 }
