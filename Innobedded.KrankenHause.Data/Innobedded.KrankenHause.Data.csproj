@@ -85,6 +85,10 @@
     <Compile Include="Migrations\202105282114404_ServiceTable_Und_ServiceReceptionTables.designer.cs">
       <DependentUpon>202105282114404_ServiceTable_Und_ServiceReceptionTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105282205456_DataAnnotation.cs" />
+    <Compile Include="Migrations\202105282205456_DataAnnotation.designer.cs">
+      <DependentUpon>202105282205456_DataAnnotation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -107,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105282114404_ServiceTable_Und_ServiceReceptionTables.resx">
       <DependentUpon>202105282114404_ServiceTable_Und_ServiceReceptionTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105282205456_DataAnnotation.resx">
+      <DependentUpon>202105282205456_DataAnnotation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

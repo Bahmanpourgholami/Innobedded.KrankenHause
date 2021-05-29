@@ -52,11 +52,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IFachRepository.cs" />
+    <Compile Include="Repositories\IGenericRepositoy.cs" />
+    <Compile Include="Services\FachRepository.cs" />
+    <Compile Include="Services\GenericRepositoy.cs" />
+    <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Innobedded.KrankenHause.Data\Innobedded.KrankenHause.Data.csproj">
+      <Project>{2aa1039f-64f5-4870-bc86-0f1b5799d44e}</Project>
+      <Name>Innobedded.KrankenHause.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
