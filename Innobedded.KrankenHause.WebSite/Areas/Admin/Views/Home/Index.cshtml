@@ -24,12 +24,12 @@
             </div>
         </div>
         <!-- 4-blocks row start -->
-        @*@{
+        @{
             Html.RenderPartial("_Blocks");
-        }*@
+        }
         <!-- 4-blocks row end -->
 
-        <div id="Test">
+        <div id="Test" class="text-align-center">
 
         </div>
 
@@ -46,13 +46,23 @@
 
     <script type="text/javascript">
 
-        function tt() {
-            alert("HASAN");
+        function show(param) {
+            //   alert("HASAN");
+            var Url = "/admin/";
+            switch (param) {
 
+                case 'Fach':
+                    Url = Url + "faches/index"
+                    break;
+
+                default:
+                    Url = Url + "faches/create"
+                    
+            }
 
             $(document).ready(function () {
-                //$.get("/admin/home/ShowBlock", function (data) {
-                $.get("/admin/faches/index", function (data) {
+                $.get(Url, { input: param }, function (data) {
+                //$.get("/admin/faches/index", function (data) {
                     $('#Test').html(data);
                 });
 

@@ -25,7 +25,7 @@ namespace Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers
         public ActionResult Index()
         {
             //return View(db.Faches.ToList());
-            return View(_unitofwork.FachRepository.GetAll());
+            return PartialView(_unitofwork.FachRepository.GetAll());
         }
 
         // GET: Admin/Faches/Details/5

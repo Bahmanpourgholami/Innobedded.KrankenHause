@@ -1006,6 +1006,9 @@
     <Content Include="Content\images\about-bg.jpg" />
     <Content Include="Content\images\appointment-image.jpg" />
     <Content Include="Content\images\author-image.jpg" />
+    <Content Include="Content\images\Flag\de.png" />
+    <Content Include="Content\images\Flag\en.png" />
+    <Content Include="Content\images\Flag\fa.png" />
     <Content Include="Content\images\news-image.jpg" />
     <Content Include="Content\images\news-image1.jpg" />
     <Content Include="Content\images\news-image2.jpg" />

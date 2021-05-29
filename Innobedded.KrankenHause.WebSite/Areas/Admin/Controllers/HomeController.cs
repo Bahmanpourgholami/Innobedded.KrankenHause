@@ -15,11 +15,12 @@ namespace Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers
             return View();
         }
 
-
-        public ActionResult ShowBlock()
+        [HttpGet]
+        public ActionResult ShowBlock(string input)
         {
-            ViewBag.Kir = "HOOOOY";
+            ViewBag.Kir = "HOOOOY" + input;
             return PartialView("_Blocks");
+            //return RedirectToAction("Index", "Faches");
         }
     }
 }
