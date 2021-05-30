@@ -61,11 +61,146 @@ namespace Innobedded.KrankenHause.WebSite.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hause.
+        ///   Looks up a localized string similar to About Us.
         /// </summary>
-        public static string Home {
+        public static string aboutus {
             get {
-                return ResourceManager.GetString("Home", resourceCulture);
+                return ResourceManager.GetString("aboutus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Make an appointment.
+        /// </summary>
+        public static string appointment {
+            get {
+                return ResourceManager.GetString("appointment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clinics.
+        /// </summary>
+        public static string clinics {
+            get {
+                return ResourceManager.GetString("clinics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact.
+        /// </summary>
+        public static string contact {
+            get {
+                return ResourceManager.GetString("contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Doctors.
+        /// </summary>
+        public static string doctors {
+            get {
+                return ResourceManager.GetString("doctors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string home {
+            get {
+                return ResourceManager.GetString("home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Services.
+        /// </summary>
+        public static string services {
+            get {
+                return ResourceManager.GetString("services", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Healthy Living.
+        /// </summary>
+        public static string slide1body {
+            get {
+                return ResourceManager.GetString("slide1body", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Meet Our Doctors.
+        /// </summary>
+        public static string slide1link {
+            get {
+                return ResourceManager.GetString("slide1link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Let&apos;s make your life happier.
+        /// </summary>
+        public static string slide1title {
+            get {
+                return ResourceManager.GetString("slide1title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Lifestyle.
+        /// </summary>
+        public static string slide2body {
+            get {
+                return ResourceManager.GetString("slide2body", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to More About Us.
+        /// </summary>
+        public static string slide2link {
+            get {
+                return ResourceManager.GetString("slide2link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aenean luctus lobortis tellus.
+        /// </summary>
+        public static string slide2title {
+            get {
+                return ResourceManager.GetString("slide2title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Health Benefits.
+        /// </summary>
+        public static string slide3body {
+            get {
+                return ResourceManager.GetString("slide3body", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Read Stories.
+        /// </summary>
+        public static string slide3link {
+            get {
+                return ResourceManager.GetString("slide3link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pellentesque nec libero nisi.
+        /// </summary>
+        public static string slide3title {
+            get {
+                return ResourceManager.GetString("slide3title", resourceCulture);
             }
         }
     }

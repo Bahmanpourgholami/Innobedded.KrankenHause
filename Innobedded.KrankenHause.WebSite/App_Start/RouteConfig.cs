@@ -19,7 +19,9 @@ namespace Innobedded.KrankenHause.WebSite
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                namespaces: new[]{ "Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers" }
+                //namespaces: new[]{ "Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers" }
+                namespaces: new[] { "Innobedded.KrankenHause.WebSite.Controllers" }
+                
 
 
             );

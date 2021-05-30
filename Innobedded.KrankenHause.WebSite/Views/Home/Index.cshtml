@@ -3,5 +3,36 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
+@{
+    Html.RenderPartial("_AboutUs");
+}
+
+
+
+
+@section Javascripts{
+    
+    @*<script>
+
+
+        function changelan(language) {
+
+            $(document).ready(function () {
+
+                $.ajax({
+                    url: "/home/changelanguage",
+                    data: { lan: language },
+                    method:"Get"
+
+                }).done(function () {
+                    alert("Changed");
+                });
+
+            })
+
+        }
+
+    </script>*@
+
+    }

@@ -22,6 +22,10 @@ namespace Innobedded.KrankenHause.Data.Entities
         [Display(Name = "vor und NachName")]
         public string NameFamily { get; set; }
 
+        [Display(Name = "Email Address")]
+        public string Email { get; set; }
+
+
         [Display(Name = "Letzte Besuch")]
         public DateTime LastEnter { get; set; }
 
