@@ -1,0 +1,35 @@
+﻿<header>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 col-sm-5">
+                <p>Welcome to a Professional Health Care</p>
+
+            </div>
+
+            <div class="col-md-8 col-sm-7 text-align-right">
+                <span class="phone-icon"><i class="fa fa-phone"></i><a href="tel:+989133619706"> 0913-361-9706</a></span>
+                <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 AM - 10:00 PM (Mon-Fri)</span>
+                <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="mailto:info@Healthcare.com">info@Healthcare.com</a></span>
+                @*<span class="date-icon"><i class="fa fa-calendar-times-o"></i>
+
+                    <a href="#">@DateTime.Now.Hour : @DateTime.Now.Minute</a></span>*@
+                <span class="fa-2x">
+
+                    <a href="@Url.Action("ChangeLanguage", "home",new { lan="de"})">
+                        <img src="~/Content/images/Flag/de.png" width="25px" height="25px" alt="Deutsch" title="Deutsch Sprache" />
+                    </a>
+
+                    <a href="@Url.Action("ChangeLanguage", "home",new { lan="fa"})">
+                        <img src="~/Content/images/Flag/fa.png" width="27px" height="27px" alt="Persian" title="زبان فارسی" />
+                    </a>
+
+                    <a href="@Url.Action("ChangeLanguage", "home",new { lan="en"})">
+                        <img src="~/Content/images/Flag/en.png" width="25px" height="25px" alt="English" title="English Language" />
+                    </a>
+                </span>
+            </div>
+
+        </div>
+    </div>
+</header>

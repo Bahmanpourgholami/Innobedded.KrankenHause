@@ -1,38 +1,79 @@
-﻿
+﻿<!-- HEADER -->
 @{
-    ViewBag.Title = "Index";
+    Html.RenderPartial("_Header");
 }
 
 
+<!-- MENU -->
+<!-- MENU LINKS -->
+@{
+    Html.RenderPartial("_Menubar");
+}
+
+<!-- HOME -->
+
+@{
+
+    Html.RenderPartial("_Slider");
+}
+
+<!-- ABOUT -->
 @{
     Html.RenderPartial("_AboutUs");
 }
 
+<!--Doctors-->
+@{
+    Html.RenderPartial("_Doctors");
+}
+
+<!--Services-->
+@{
+    Html.RenderPartial("_Services");
+}
+
+<!--Clinics-->
+@{
+    Html.RenderPartial("_Clinics");
+}
 
 
+<!--Appointment-->
+@{
+    Html.RenderPartial("_Appointments");
+}
+
+
+
+
+<!--#region Javascript and Jquery code for Index UI Handele-->
 
 @section Javascripts{
-    
+
     @*<script>
 
 
-        function changelan(language) {
+            function changelan(language) {
 
-            $(document).ready(function () {
+                $(document).ready(function () {
 
-                $.ajax({
-                    url: "/home/changelanguage",
-                    data: { lan: language },
-                    method:"Get"
+                    $.ajax({
+                        url: "/home/changelanguage",
+                        data: { lan: language },
+                        method:"Get"
 
-                }).done(function () {
-                    alert("Changed");
-                });
+                    }).done(function () {
+                        alert("Changed");
+                    });
 
-            })
+                })
 
-        }
+            }
 
-    </script>*@
+        </script>*@
 
-    }
+}
+
+
+
+<!--#endregion-->

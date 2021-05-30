@@ -13,17 +13,23 @@ namespace Innobedded.KrankenHause.WebSite.Controllers
         // GET: Home
         public ActionResult Index()
         {
-
+            Test();
             return View();
         }
 
         public ActionResult Test()
         {
-
-            return View("index");
+            //ChangeLanguage("fa");
+            return Redirect("www.google.com");
         }
 
 
+
+        /// <summary>
+        /// Change WebSite Language and save as Cooki in User Broweser
+        /// </summary>
+        /// <param name="lan"></param>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult ChangeLanguage(string lan)
         {
@@ -40,5 +46,9 @@ namespace Innobedded.KrankenHause.WebSite.Controllers
 
             return Redirect("/");
         }
+
+
+
+
     }
 }

@@ -31,7 +31,7 @@ namespace Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(LoginViewModel loginview)
+        public ActionResult Login(LoginViewModel loginview,string ReturnUrl="/")
         {
             if (ModelState.IsValid)
             {
@@ -39,7 +39,7 @@ namespace Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers
                 {
                     
                     FormsAuthentication.SetAuthCookie(loginview.UserName, loginview.Remember);
-                    return RedirectToAction("index", "home");
+                    return Redirect(ReturnUrl);
                 }
                 else
                 {
