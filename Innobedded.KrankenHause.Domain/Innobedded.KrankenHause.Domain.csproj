@@ -61,6 +61,7 @@
     <Compile Include="Services\GenericRepositoy.cs" />
     <Compile Include="Services\UserRepository.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -72,9 +73,7 @@
       <Name>Innobedded.KrankenHause.Data</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

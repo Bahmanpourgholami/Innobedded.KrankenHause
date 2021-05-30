@@ -33,6 +33,7 @@ namespace Innobedded.KrankenHause.Data.Entities
 
         [Display(Name = "Rezeption Date")]
         [DisplayFormat(DataFormatString = "{0: dd/MM/yyyy}")]
+        [DataType(DataType.Date)]
         public DateTime ReceptionTime { get; set; }
 
 

@@ -34,6 +34,7 @@ namespace Innobedded.KrankenHause.Data.Entities
         [Display(Name = "Email")]
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         [MinLength(10)]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Display(Name = "Beschreibung")]

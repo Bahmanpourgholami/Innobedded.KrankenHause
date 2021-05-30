@@ -13,16 +13,20 @@ namespace Innobedded.KrankenHause.Data.Entities
         public int UserID { get; set; }
 
         [Display(Name = "Nutzername")]
+        [MaxLength(20)]
         public string UserName { get; set; }
 
 
         [Display(Name = "Passwort")]
+        [MaxLength(20)]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
         [Display(Name = "vor und NachName")]
         public string NameFamily { get; set; }
 
         [Display(Name = "Email Address")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
 

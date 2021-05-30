@@ -18,7 +18,7 @@ namespace Innobedded.KrankenHause.Domain.Services
 
         public bool IsExsist(string username, string pass)
         {
-            return _entities.Any(p => p.UserName == username && p.Password == pass)
+            return _entities.Any(p => p.UserName == username && p.Password == pass);
             
             
         }
