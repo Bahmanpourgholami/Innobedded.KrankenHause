@@ -97,6 +97,10 @@
     <Compile Include="Migrations\202105301043537_add_EmailField_to_UserTable.designer.cs">
       <DependentUpon>202105301043537_add_EmailField_to_UserTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105301139174_All_Usertable_change.cs" />
+    <Compile Include="Migrations\202105301139174_All_Usertable_change.designer.cs">
+      <DependentUpon>202105301139174_All_Usertable_change.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -128,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105301043537_add_EmailField_to_UserTable.resx">
       <DependentUpon>202105301043537_add_EmailField_to_UserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105301139174_All_Usertable_change.resx">
+      <DependentUpon>202105301139174_All_Usertable_change.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

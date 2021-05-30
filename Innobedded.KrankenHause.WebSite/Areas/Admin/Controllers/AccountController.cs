@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Innobedded.KrankenHause.WebSite.Controllers
+namespace Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers
 {
     public class AccountController : Controller
     {
@@ -16,6 +16,10 @@ namespace Innobedded.KrankenHause.WebSite.Controllers
             unitOfWork = new UnitOfWork();
         }
 
+        public ActionResult Index()
+        {
+            return Redirect("www.google.com");
+        }
 
         public ActionResult Login()
         {

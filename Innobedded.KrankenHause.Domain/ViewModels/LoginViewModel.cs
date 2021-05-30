@@ -9,12 +9,12 @@ namespace Innobedded.KrankenHause.Domain.ViewModels
 {
   public  class LoginViewModel
     {
-        [Display(Name = "Nutzername")]
+        [Display(Name = "Username ")]
         [MaxLength(20)]
         public string UserName { get; set; }
 
 
-        [Display(Name = "Passwort")]
+        [Display(Name = "Password ")]
         [MaxLength(20)]
         [DataType(DataType.Password)]
         public string Password { get; set; }
