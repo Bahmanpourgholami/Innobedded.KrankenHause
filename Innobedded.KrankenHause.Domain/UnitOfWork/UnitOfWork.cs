@@ -25,7 +25,7 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
 
         private FachRepository fachRepository;
         private DoctorRepository doctorRepository;
-
+        private KlinikServicesRepository servicesRepository;
 
 
         private UserRepository userRepository;
@@ -58,6 +58,17 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
             }
         }
 
+        public KlinikServicesRepository klinikServicesRepository
+        {
+            get 
+            {
+                if (servicesRepository == null)
+                {
+                    servicesRepository = new KlinikServicesRepository(_maindbcontext);
+                }
+                return servicesRepository;
+            }
+        }
 
 
         public UserRepository UserRepository
