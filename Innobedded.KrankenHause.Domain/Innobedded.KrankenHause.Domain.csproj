@@ -55,9 +55,11 @@
     <Compile Include="Repositories\IDoctorRepository.cs" />
     <Compile Include="Repositories\IFachRepository.cs" />
     <Compile Include="Repositories\IGenericRepositoy.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="Services\DoctorRepository.cs" />
     <Compile Include="Services\FachRepository.cs" />
     <Compile Include="Services\GenericRepositoy.cs" />
+    <Compile Include="Services\UserRepository.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,7 +72,9 @@
       <Name>Innobedded.KrankenHause.Data</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

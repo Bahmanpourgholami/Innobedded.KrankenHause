@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Innobedded.KrankenHause.Data.Context;
+
 using Innobedded.KrankenHause.Domain.Repositories;
 using Innobedded.KrankenHause.Domain.Services;
 
@@ -27,8 +28,11 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
 
 
 
+        private UserRepository userRepository;
 
-        public FachRepository FachRepository { 
+
+        public FachRepository FachRepository
+        {
             get
             {
                 if (fachRepository == null)
@@ -39,8 +43,8 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
 
 
             }
-                
-             }
+
+        }
 
         public DoctorRepository DoctorRepository
         {
@@ -53,6 +57,21 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
                 return doctorRepository;
             }
         }
+
+
+
+        public UserRepository UserRepository
+        {
+            get
+            {
+                if (userRepository == null)
+                {
+                    userRepository = new UserRepository(_maindbcontext);
+                }
+                return userRepository;
+            }
+        }
+
 
 
 
