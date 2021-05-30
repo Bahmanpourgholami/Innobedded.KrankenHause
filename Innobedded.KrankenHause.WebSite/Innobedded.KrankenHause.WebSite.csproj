@@ -1175,13 +1175,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Errors\Error404.cshtml" />
     <Content Include="Views\Home\_AboutUs.cshtml" />
-    <Content Include="Views\Home\_MenuBar.cshtml" />
-    <Content Include="Views\Home\_Slider.cshtml" />
-    <Content Include="Views\Home\_Header.cshtml" />
-    <Content Include="Views\Doctors\_Doctors.cshtml" />
+    <Content Include="Views\Shared\_MenuBar.cshtml" />
+    <Content Include="Views\Shared\_Slider.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Home\_Services.cshtml" />
     <Content Include="Views\Home\_Clinics.cshtml" />
     <Content Include="Views\Home\_Appointments.cshtml" />
+    <Content Include="Views\Doctors\_Doctors.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

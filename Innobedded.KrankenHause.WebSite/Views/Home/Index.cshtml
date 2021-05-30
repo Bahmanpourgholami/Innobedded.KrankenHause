@@ -1,4 +1,6 @@
 ﻿<!-- HEADER -->
+
+
 @{
     Html.RenderPartial("_Header");
 }
@@ -23,9 +25,12 @@
 }
 
 <!--Doctors-->
+
 @{
-    Html.RenderPartial("_Doctors");
+    Html.RenderAction("_Doctors", "Doctors");
+    
 }
+
 
 <!--Services-->
 @{
@@ -42,8 +47,6 @@
 @{
     Html.RenderPartial("_Appointments");
 }
-
-
 
 
 <!--#region Javascript and Jquery code for Index UI Handele-->

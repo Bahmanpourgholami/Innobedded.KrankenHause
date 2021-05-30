@@ -11,6 +11,7 @@ namespace Innobedded.KrankenHause.WebSite.Controllers
         // GET: Doctors
         public ActionResult _Doctors()
         {
+            //ViewBag.d = "Heeerrri";
             return PartialView();
         }
     }
