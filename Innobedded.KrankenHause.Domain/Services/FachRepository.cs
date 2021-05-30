@@ -15,6 +15,12 @@ namespace Innobedded.KrankenHause.Domain.Services
         {
 
         }
+
+        public string GetFachTitle(int id)
+        {
+            return _entities.Find(id).Title;
+        }
+
         public Fach GetSpecialFach(string title)
         {
             //return _mycontext.Set<Fach>().Where(p=>p.Title.)

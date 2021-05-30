@@ -10,5 +10,7 @@ namespace Innobedded.KrankenHause.Domain.Repositories
    public interface IFachRepository:IGenericRepositoy<Fach>
     {
         Fach GetSpecialFach(string title);
+
+        string GetFachTitle(int id);
     }
 }

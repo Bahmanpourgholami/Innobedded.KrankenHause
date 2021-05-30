@@ -1016,7 +1016,7 @@
     <Content Include="Content\images\slider1.jpg" />
     <Content Include="Content\images\slider2.jpg" />
     <Content Include="Content\images\slider3.jpg" />
-    <Content Include="Content\images\team-image1.jpg" />
+    <Content Include="Content\images\Doctors\team-image1.jpg" />
     <Content Include="Content\images\team-image2.jpg" />
     <Content Include="Content\images\team-image3.jpg" />
     <Content Include="Content\js\bootstrap.min.js" />
@@ -1043,9 +1043,13 @@
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\FachesController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Controllers\AboutUsController.cs" />
+    <Compile Include="Controllers\AppointmentController.cs" />
+    <Compile Include="Controllers\ClinicsController.cs" />
     <Compile Include="Controllers\DoctorsController.cs" />
     <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1174,13 +1178,13 @@
     <Content Include="Views\Shared\_LayoutMain.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Errors\Error404.cshtml" />
-    <Content Include="Views\Home\_AboutUs.cshtml" />
+    <Content Include="Views\AboutUs\_AboutUs.cshtml" />
     <Content Include="Views\Shared\_MenuBar.cshtml" />
     <Content Include="Views\Shared\_Slider.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
-    <Content Include="Views\Home\_Services.cshtml" />
-    <Content Include="Views\Home\_Clinics.cshtml" />
-    <Content Include="Views\Home\_Appointments.cshtml" />
+    <Content Include="Views\Services\_Services.cshtml" />
+    <Content Include="Views\Clinics\_Clinics.cshtml" />
+    <Content Include="Views\Appointment\_Appointments.cshtml" />
     <Content Include="Views\Doctors\_Doctors.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Innobedded.KrankenHause.Domain.UnitOfWork;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +9,19 @@ namespace Innobedded.KrankenHause.WebSite.Controllers
 {
     public class DoctorsController : Controller
     {
-        // GET: Doctors
+        UnitOfWork _unitofwork;
+        public DoctorsController()
+        {
+            _unitofwork = new UnitOfWork();
+        }
+
+
         public ActionResult _Doctors()
         {
             //ViewBag.d = "Heeerrri";
-            return PartialView();
+
+
+            return PartialView(_unitofwork.DoctorRepository.doctorsViewModels());
         }
     }
 }

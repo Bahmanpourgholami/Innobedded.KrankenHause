@@ -61,6 +61,7 @@
     <Compile Include="Services\GenericRepositoy.cs" />
     <Compile Include="Services\UserRepository.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
+    <Compile Include="ViewModels\DoctorsViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
