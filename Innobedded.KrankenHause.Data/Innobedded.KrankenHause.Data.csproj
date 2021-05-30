@@ -93,6 +93,10 @@
     <Compile Include="Migrations\202105292034173_Krank_table_changed.designer.cs">
       <DependentUpon>202105292034173_Krank_table_changed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105301043537_add_EmailField_to_UserTable.cs" />
+    <Compile Include="Migrations\202105301043537_add_EmailField_to_UserTable.designer.cs">
+      <DependentUpon>202105301043537_add_EmailField_to_UserTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -121,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105292034173_Krank_table_changed.resx">
       <DependentUpon>202105292034173_Krank_table_changed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105301043537_add_EmailField_to_UserTable.resx">
+      <DependentUpon>202105301043537_add_EmailField_to_UserTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
