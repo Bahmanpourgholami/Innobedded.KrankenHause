@@ -1,29 +1,56 @@
 ﻿using Innobedded.KrankenHause.Domain.UnitOfWork;
+using Innobedded.KrankenHause.Domain.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers
 {
     public class AccountController : Controller
     {
-        UnitOfWork unitOfWork;
+        UnitOfWork _unitOfWork;
 
         public AccountController()
         {
-            unitOfWork = new UnitOfWork();
+            _unitOfWork = new UnitOfWork();
         }
 
         public ActionResult Index()
         {
-            return Redirect("www.google.com");
+            return View();
         }
 
+
+        [HttpGet]
         public ActionResult Login()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(LoginViewModel loginview)
+        {
+            if (ModelState.IsValid)
+            {
+                if(_unitOfWork.UserRepository.IsExsist(loginview.UserName,loginview.Password))
+                {
+                    
+                    FormsAuthentication.SetAuthCookie(loginview.UserName, loginview.Remember);
+                    return RedirectToAction("index", "home");
+                }
+                else
+                {
+                    ModelState.AddModelError("UserName", "Username not found");
+                }
+                
+            }
+            
+            
+                return View(loginview);
+            
         }
     }
 }

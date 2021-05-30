@@ -12,6 +12,7 @@ using Innobedded.KrankenHause.Domain.UnitOfWork;
 
 namespace Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers
 {
+    [Authorize]
     public class FachesController : Controller
     {
         //private KrankenHausDbContext db = new KrankenHausDbContext();
