@@ -2,14 +2,23 @@
 
 @{
     ViewBag.Title = "Index";
+
 }
 
-<h2>Index</h2>
+<h2>Fach Management</h2>
 
+<br />
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <a id="create" class="btn btn-primary txt-white" title="Create" onclick="createfach()">
+        <i class="icon-pencil icon-white"></i>
+        <span>
+            <strong>Create New Fach</strong>
+        </span>
+    </a>
+
+    <i class="bi bi-trash"></i>
 </p>
-<table class="table">
+<table class="table table-responsive justify-content-center">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Title)
@@ -17,18 +26,85 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.FachID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.FachID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.FachID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
 
-    @ViewBag.Kir
+                <a class="btn btn-primary txt-white" title="Edit" onclick="t()">
+                    <i class="icon-note icon-white"></i>
+                    <span>
+
+                    </span>
+                </a>
+                <a id="details" class="btn btn-primary txt-white" title="Details">
+                    <i class="icon-list icon-white"></i>
+                    <span>
+
+                    </span>
+                </a>
+
+
+                <a id="delete" class="btn btn-primary txt-white" title="Delete">
+                    <i class="icon-trash icon-white"></i>
+                    <span>
+
+                    </span>
+                </a>
+
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.FachID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.FachID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.FachID })*@
+            </td>
+        </tr>
+    }
+
+
 </table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                @*<h5 class="modal-title" id="myModalLabel">Appointment Errors</h5>*@
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="myModal_body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+
+    function createfach() {
+
+        $.get("/admin/faches/create", function (result) {
+            $('#myModal').modal();
+            $('#myModal_body').html(result);
+
+        });
+
+        
+    }
+
+
+
+
+
+</script>

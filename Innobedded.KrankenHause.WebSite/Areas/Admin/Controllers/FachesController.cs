@@ -23,6 +23,8 @@ namespace Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers
         }
 
         // GET: Admin/Faches
+
+        
         public ActionResult Index()
         {
             //return View(db.Faches.ToList());
@@ -48,7 +50,7 @@ namespace Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers
         // GET: Admin/Faches/Create
         public ActionResult Create()
         {
-            return View();
+            return PartialView();
         }
 
         // POST: Admin/Faches/Create
@@ -64,10 +66,10 @@ namespace Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers
                 //db.SaveChanges();
                 _unitofwork.FachRepository.Insert(fach);
                 _unitofwork.FachRepository.Save();
-                return RedirectToAction("Index");
+                return PartialView(fach);
             }
 
-            return View(fach);
+            return PartialView(fach);
         }
 
         // GET: Admin/Faches/Edit/5
@@ -133,7 +135,7 @@ namespace Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers
 
         public ActionResult SpecialFach(string fach)
         {
-            fach = "کیر";
+            fach = "test";
             var Temp = _unitofwork.FachRepository.GetSpecialFach(fach);
             if (Temp == null)
             {

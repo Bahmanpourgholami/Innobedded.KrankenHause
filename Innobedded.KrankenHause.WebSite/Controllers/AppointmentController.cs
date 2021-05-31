@@ -22,6 +22,7 @@ namespace Innobedded.KrankenHause.WebSite.Controllers
         [HttpPost]
         public ActionResult SetAppointment(string name, string email,DateTime mydate, string phone,string message) {
             string mymessage = "";
+            string title = "";
             var heute = DateTime.Now.Date;
 
             if (mydate >= heute)
@@ -37,14 +38,18 @@ namespace Innobedded.KrankenHause.WebSite.Controllers
                 });
                 _unitofwork.AppointmentRepository.Save();
                 _unitofwork.Commit();
-                mymessage = "Success ! we Send you Email... Please Check Inbox or Spam email";
+                mymessage = "We Send you Email... Please Check Inbox or Spam email";
+                title = "Successfull !";
             }
             else
             {
                 mymessage = "Date is inValid";
+                title = "Fail!";
             }
 
-            return Content(mymessage);
+            Session["message"] = mymessage;
+            Session["title"] = title;
+            return RedirectToAction("success","Success");
 
             //return Redirect(name);
         }

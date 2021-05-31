@@ -28,13 +28,27 @@
             Html.RenderPartial("_Blocks");
         }
         <!-- 4-blocks row end -->
+    <div style="height: auto; overflow-y: scroll;">
+        akdna
+        <p></p>sfaaf
+        afd
+        <p></p>sfaaf
+        <p></p>sfaaf
+        <p></p>sfaaf
+        <p></p>sfaaf
+        <p></p>sfaaf
+        adf
+        aadf
+        aadf
+        adfa
+        afd
+        a
+    </div>
 
-        <div id="Test" class="text-align-center">
+        <fieldset id="AllContent">
 
-        </div>
 
-        @ViewBag.Kir
-        Alaki
+        </fieldset>
     </div>
     <!-- Main content ends -->
 
@@ -44,10 +58,11 @@
 
 @section js{
 
+
     <script type="text/javascript">
 
         $('#fach').click(function () {
-            //show('Fach')
+            show('Fach')
         });
 
         function show(param) {
@@ -56,21 +71,22 @@
             switch (param) {
 
                 case 'Fach':
-                    Url = Url + "faches/index"
+                    Url = Url + "faches/create"
                     break;
 
                 default:
                     Url = Url + "faches/create"
-                    
+
             }
 
             $(document).ready(function () {
                 $.get(Url, { input: param }, function (data) {
-                //$.get("/admin/faches/index", function (data) {
-                    $('#Test').html(data);
+                    $('#AllContent').html(data);
                 });
 
             });
         }
     </script>
+
+
 }
