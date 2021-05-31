@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\KrankenHausDbContext.cs" />
+    <Compile Include="Entities\Appointment.cs" />
     <Compile Include="Entities\Doctor.cs" />
     <Compile Include="Entities\Education.cs" />
     <Compile Include="Entities\Fach.cs" />
@@ -101,6 +102,10 @@
     <Compile Include="Migrations\202105301139174_All_Usertable_change.designer.cs">
       <DependentUpon>202105301139174_All_Usertable_change.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105311110278_Reserve_Table_create.cs" />
+    <Compile Include="Migrations\202105311110278_Reserve_Table_create.designer.cs">
+      <DependentUpon>202105311110278_Reserve_Table_create.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -135,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105301139174_All_Usertable_change.resx">
       <DependentUpon>202105301139174_All_Usertable_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105311110278_Reserve_Table_create.resx">
+      <DependentUpon>202105311110278_Reserve_Table_create.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
