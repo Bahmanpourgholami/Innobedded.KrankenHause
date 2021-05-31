@@ -62,6 +62,7 @@
     <Compile Include="Repositories\IKlinikServicesRepository.cs" />
     <Compile Include="Repositories\IKlinikTypeRepository.cs" />
     <Compile Include="Repositories\IKrankRepository.cs" />
+    <Compile Include="Repositories\IReceptionRepository.cs" />
     <Compile Include="Repositories\ISexRepository.cs" />
     <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="Services\DoctorRepository.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Services\KlinikServicesRepository.cs" />
     <Compile Include="Services\KlinikTypeRepository.cs" />
     <Compile Include="Services\KrankRepository.cs" />
+    <Compile Include="Services\ReceptionRepository.cs" />
     <Compile Include="Services\SexRepository.cs" />
     <Compile Include="Services\UserRepository.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />

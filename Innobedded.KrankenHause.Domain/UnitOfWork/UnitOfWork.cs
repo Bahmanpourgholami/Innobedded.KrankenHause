@@ -35,9 +35,21 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
         private KlinikRepository klinikRepository;
         private KlinikTypeRepository klinikTypeRepository;
         private KrankRepository krankRepository;
+        private ReceptionRepository receptionRepository;
 
 
 
+        public ReceptionRepository ReceptionRepository { get {
+
+
+                if (receptionRepository == null)
+                {
+
+                    receptionRepository = new ReceptionRepository(_maindbcontext);
+                }
+                return receptionRepository;
+            
+            } }
 
         public KrankRepository KrankRepository { get {
 
