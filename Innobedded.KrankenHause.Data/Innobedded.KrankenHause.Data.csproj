@@ -106,6 +106,10 @@
     <Compile Include="Migrations\202105311110278_Reserve_Table_create.designer.cs">
       <DependentUpon>202105311110278_Reserve_Table_create.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105311641448_Set_Appointment_DbSet.cs" />
+    <Compile Include="Migrations\202105311641448_Set_Appointment_DbSet.designer.cs">
+      <DependentUpon>202105311641448_Set_Appointment_DbSet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -143,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105311110278_Reserve_Table_create.resx">
       <DependentUpon>202105311110278_Reserve_Table_create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105311641448_Set_Appointment_DbSet.resx">
+      <DependentUpon>202105311641448_Set_Appointment_DbSet.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

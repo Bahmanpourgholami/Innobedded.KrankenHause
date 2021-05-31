@@ -25,6 +25,14 @@ namespace Innobedded.KrankenHause.Data.Context
 
         public DbSet<Insurance> Insurances { get; set; }
 
+        public DbSet<User> Users { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
+
+        public DbSet<KlinikService> KlinikServices { get; set; }
+
+        public DbSet<Reception> Receptions { get; set; }
+
+
 
 
     }

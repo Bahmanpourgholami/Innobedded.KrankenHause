@@ -21,31 +21,31 @@
 
 <!-- ABOUT -->
 @{
-    Html.RenderAction("_AboutUs","Aboutus");
+    Html.RenderAction("_AboutUs", "Aboutus");
 }
 
 <!--Doctors-->
 
 @{
     Html.RenderAction("_Doctors", "Doctors");
-    
+
 }
 
 
 <!--Services-->
 @{
-    Html.RenderAction("_Services","Services");
+    Html.RenderAction("_Services", "Services");
 }
 
 <!--Clinics-->
 @{
-    Html.RenderAction("_Clinics","Clinics");
+    Html.RenderAction("_Clinics", "Clinics");
 }
 
 
 <!--Appointment-->
 @{
-    Html.RenderAction("_Appointments","Appointment");
+    Html.RenderAction("_Appointments", "Appointment");
 }
 
 
@@ -60,18 +60,65 @@
         var currentUrl = document.documentURI;
         document.onreadystatechange = function () {
             if (document.readyState === 'complete') {
+
+
+                  ////  Top Menu Links
                 document.getElementById('_top').setAttribute("href", "#top");
                 document.getElementById('_aboutus').setAttribute("href", "#about");
                 document.getElementById('_doctors').setAttribute("href", "#doctors");
                 document.getElementById('_services').setAttribute("href", "#services");
                 document.getElementById('_clinics').setAttribute("href", "#clinics");
-                
+
                 document.getElementById('_appointment').setAttribute("href", "#appointment");
+
+                //alert("IST OK");
+
+                /// Check Appointment Form Before Send
+
+
+
+
+
             }
         }
-            
-        
 
+
+        function test() {
+
+            var Message = "";
+            var button = true;
+            if ($('#name').val() == "" || $('#name').val().length < 5) {
+                Message = Message + "-  Chech FullName and Enter your fullname(Name and Family) " + "</br></br>"
+                button = false;
+            }
+
+            
+            if ($('#email').val() == "" || $('#email').val().length < 5 ) {
+                Message = Message + "-  Email is Invalid" + "</br></br>";
+                button = false;
+            }
+            if ($('#phone').val() == "" || $('#phone').val().length < 5  ) {
+                Message = Message + "-  Telofon is Invalid" + "</br></br>";
+                button = false;
+            }
+
+
+
+            if (button == false) {
+                $('#cf-submit').prop("disabled", true);
+                $('#modal_body').html(Message);
+                $('#exampleModal').modal("show");
+                
+            }
+            else {
+                var button = true;
+                $('#cf-submit').prop("disabled", false);
+                
+            }
+
+        }
+
+       
     </script>
 
     @*<script>
