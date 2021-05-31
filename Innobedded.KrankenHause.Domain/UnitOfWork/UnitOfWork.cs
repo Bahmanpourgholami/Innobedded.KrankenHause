@@ -12,7 +12,8 @@ using Innobedded.KrankenHause.Domain.Services;
 namespace Innobedded.KrankenHause.Domain.UnitOfWork
 {
     /// <summary>
-    /// This Class can not Inherit Or Changed by sealed Keyword
+    /// Notice | Achtung :-)
+    /// This Class can not Inherit Or Changed 
     /// </summary>
     public sealed class UnitOfWork : IDisposable
     {
@@ -37,9 +38,27 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
         private KrankRepository krankRepository;
         private ReceptionRepository receptionRepository;
         private KlinikServicesReceptionRepository klinikServicesReceptionRepository;
+        private AppointmentRepository appointmentRepository;
 
 
-        public KlinikServicesReceptionRepository KlinikServicesReceptionRepository { get {
+        public AppointmentRepository AppointmentRepository
+        {
+            get
+            {
+                if (appointmentRepository == null)
+                {
+
+                    appointmentRepository = new AppointmentRepository(_maindbcontext);
+                }
+                return appointmentRepository;
+
+            }
+        }
+
+        public KlinikServicesReceptionRepository KlinikServicesReceptionRepository
+        {
+            get
+            {
 
                 if (klinikServicesReceptionRepository == null)
                 {
@@ -47,9 +66,13 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
                 }
 
                 return klinikServicesReceptionRepository;
-            } }
+            }
+        }
 
-        public ReceptionRepository ReceptionRepository { get {
+        public ReceptionRepository ReceptionRepository
+        {
+            get
+            {
 
 
                 if (receptionRepository == null)
@@ -58,10 +81,14 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
                     receptionRepository = new ReceptionRepository(_maindbcontext);
                 }
                 return receptionRepository;
-            
-            } }
 
-        public KrankRepository KrankRepository { get {
+            }
+        }
+
+        public KrankRepository KrankRepository
+        {
+            get
+            {
 
 
                 if (krankRepository == null)
@@ -70,30 +97,41 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
                 }
 
                 return krankRepository;
-            }}
+            }
+        }
 
 
-        public KlinikTypeRepository KlinikTypeRepository { get {
+        public KlinikTypeRepository KlinikTypeRepository
+        {
+            get
+            {
 
                 if (klinikTypeRepository == null)
                 {
                     klinikTypeRepository = new KlinikTypeRepository(_maindbcontext);
                 }
                 return klinikTypeRepository;
-            } }
+            }
+        }
 
 
-        public KlinikRepository KlinikRepository { get {
-                if(klinikRepository==null)
+        public KlinikRepository KlinikRepository
+        {
+            get
+            {
+                if (klinikRepository == null)
                 {
                     klinikRepository = new KlinikRepository(_maindbcontext);
                 }
                 return klinikRepository;
-            
-            } }
 
-        public JobRepository JobRepository {
-            get {
+            }
+        }
+
+        public JobRepository JobRepository
+        {
+            get
+            {
 
                 if (jobRepository == null)
                 {
