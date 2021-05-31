@@ -57,6 +57,7 @@
     <Compile Include="Repositories\IFachRepository.cs" />
     <Compile Include="Repositories\IGenericRepositoy.cs" />
     <Compile Include="Repositories\IInsurenceRepository.cs" />
+    <Compile Include="Repositories\IJobRepository.cs" />
     <Compile Include="Repositories\IKlinikServicesRepository.cs" />
     <Compile Include="Repositories\ISexRepository.cs" />
     <Compile Include="Repositories\IUserRepository.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Services\FachRepository.cs" />
     <Compile Include="Services\GenericRepositoy.cs" />
     <Compile Include="Services\InsurenceRepository.cs" />
+    <Compile Include="Services\JobRepository.cs" />
     <Compile Include="Services\KlinikServicesRepository.cs" />
     <Compile Include="Services\SexRepository.cs" />
     <Compile Include="Services\UserRepository.cs" />
