@@ -1010,7 +1010,7 @@
     <Content Include="Content\images\Flag\en.png" />
     <Content Include="Content\images\Flag\fa.png" />
     <Content Include="Content\images\news-image.jpg" />
-    <Content Include="Content\images\news-image1.jpg" />
+    <Content Include="Content\images\KlinikServices\news-image1.jpg" />
     <Content Include="Content\images\news-image2.jpg" />
     <Content Include="Content\images\news-image3.jpg" />
     <Content Include="Content\images\slider1.jpg" />
@@ -1186,6 +1186,8 @@
     <Content Include="Views\Clinics\_Clinics.cshtml" />
     <Content Include="Views\Appointment\_Appointments.cshtml" />
     <Content Include="Views\Doctors\_Doctors.cshtml" />
+    <Content Include="Views\Shared\_ServicesDetailsLayout.cshtml" />
+    <Content Include="Views\Services\ServiceDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

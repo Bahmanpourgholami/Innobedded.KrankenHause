@@ -53,6 +53,22 @@
 
 @section Javascripts{
 
+
+    <script>
+
+        var MyUrl;
+        var currentUrl = document.documentURI;
+        document.onreadystatechange = function () {
+            if (document.readyState === 'complete') {
+                document.getElementById('_top').setAttribute("href", "#top");
+                document.getElementById('_aboutus').setAttribute("href", "#about");
+            }
+        }
+            
+        
+
+    </script>
+
     @*<script>
 
 
