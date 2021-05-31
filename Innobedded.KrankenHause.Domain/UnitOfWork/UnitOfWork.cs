@@ -32,8 +32,18 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
         private SexRepository sexRepository;
         private InsurenceRepository insurenceRepository;
         private JobRepository jobRepository;
+        private KlinikRepository klinikRepository;
 
 
+
+        public KlinikRepository KlinikRepository { get {
+                if(klinikRepository==null)
+                {
+                    klinikRepository = new KlinikRepository(_maindbcontext);
+                }
+                return klinikRepository;
+            
+            } }
 
         public JobRepository JobRepository {
             get {
