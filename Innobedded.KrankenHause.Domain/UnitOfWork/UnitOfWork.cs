@@ -30,7 +30,21 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
         private EducationRepository educationRepository;
         private UserRepository userRepository;
         private SexRepository sexRepository;
+        private InsurenceRepository insurenceRepository;
 
+
+        public InsurenceRepository InsurenceRepository
+        {
+            get
+            {
+
+                if (insurenceRepository == null)
+                {
+                    insurenceRepository = new InsurenceRepository(_maindbcontext);
+                }
+                return insurenceRepository;
+            }
+        }
         public FachRepository FachRepository
         {
             get
