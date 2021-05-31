@@ -50,8 +50,10 @@ namespace Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers
         // GET: Admin/Faches/Create
         public ActionResult Create()
         {
-            return PartialView();
+            return View();
         }
+
+     
 
         // POST: Admin/Faches/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
@@ -66,10 +68,10 @@ namespace Innobedded.KrankenHause.WebSite.Areas.Admin.Controllers
                 //db.SaveChanges();
                 _unitofwork.FachRepository.Insert(fach);
                 _unitofwork.FachRepository.Save();
-                return PartialView(fach);
+                return View(fach);
             }
 
-            return PartialView(fach);
+            return View(fach);
         }
 
         // GET: Admin/Faches/Edit/5

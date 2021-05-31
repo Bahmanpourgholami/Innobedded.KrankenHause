@@ -2,14 +2,15 @@
 
 @{
     ViewBag.Title = "Index";
-
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
 <h2>Fach Management</h2>
 
 <br />
 <p>
-    <a id="create" class="btn btn-primary txt-white" title="Create" onclick="createfach()">
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a id="create" class="btn btn-primary txt-white" title="Create" href="@Url.Action("create")">
         <i class="icon-pencil icon-white"></i>
         <span>
             <strong>Create New Fach</strong>
@@ -28,38 +29,46 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Title)
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
 
-                <a class="btn btn-primary txt-white" title="Edit" onclick="t()">
-                    <i class="icon-note icon-white"></i>
-                    <span>
+        <a class="btn btn-primary txt-white" title="Edit" href=" @Url.Action("Edit", "faches", new { id = item.FachID })">
+            <i class="icon-note icon-white"></i>
+            <span>
 
-                    </span>
-                </a>
-                <a id="details" class="btn btn-primary txt-white" title="Details">
-                    <i class="icon-list icon-white"></i>
-                    <span>
+            </span>
+        </a>
+        |
+        <a id="details" class="btn btn-primary txt-white" title="Details" href="@Url.Action("Details",null,new {id=item.FachID })">
+            <i class="icon-list icon-white"></i>
+            <span>
 
-                    </span>
-                </a>
+            </span>
+        </a>
 
+        |
+        <a id="delete" class="btn btn-primary txt-white" title="Delete" href="@Url.Action("Delete",null,new {id=item.FachID })">
+            <i class="icon-trash icon-white"></i>
+            <span>
 
-                <a id="delete" class="btn btn-primary txt-white" title="Delete">
-                    <i class="icon-trash icon-white"></i>
-                    <span>
+            </span>
+        </a>
 
-                    </span>
-                </a>
-
-                @*@Html.ActionLink("Edit", "Edit", new { id = item.FachID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.FachID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.FachID })*@
-            </td>
-        </tr>
+    </td>
+</tr>
     }
 
 
@@ -67,12 +76,12 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header">-->
                 @*<h5 class="modal-title" id="myModalLabel">Appointment Errors</h5>*@
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -85,26 +94,6 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
 
 
-
-
-<script>
-
-    function createfach() {
-
-        $.get("/admin/faches/create", function (result) {
-            $('#myModal').modal();
-            $('#myModal_body').html(result);
-
-        });
-
-        
-    }
-
-
-
-
-
-</script>

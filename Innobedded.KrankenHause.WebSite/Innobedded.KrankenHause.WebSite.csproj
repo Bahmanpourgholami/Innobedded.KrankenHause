@@ -1076,7 +1076,6 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Faches\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Faches\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Faches\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Faches\Edit.cshtml" />
@@ -1174,6 +1173,8 @@
     <Content Include="Areas\Admin\Views\Shared\_Blocks.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_LoginLayout.cshtml" />
     <Content Include="Areas\Admin\Views\Account\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Faches\Create.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_LayoutMain.cshtml" />

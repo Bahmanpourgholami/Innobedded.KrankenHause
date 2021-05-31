@@ -28,27 +28,16 @@
             Html.RenderPartial("_Blocks");
         }
         <!-- 4-blocks row end -->
-    <div style="height: auto; overflow-y: scroll;">
-        akdna
-        <p></p>sfaaf
-        afd
-        <p></p>sfaaf
-        <p></p>sfaaf
-        <p></p>sfaaf
-        <p></p>sfaaf
-        <p></p>sfaaf
-        adf
-        aadf
-        aadf
-        adfa
-        afd
-        a
-    </div>
+        <div style="height: auto; overflow-y: scroll;">
+
+        </div>
 
         <fieldset id="AllContent">
-
-
         </fieldset>
+
+        <iframe width="890" height="480" style="overflow-y: scroll;" src="/admin/faches/index"
+                frameborder="0" allowfullscreen>
+        </iframe>
     </div>
     <!-- Main content ends -->
 
@@ -61,6 +50,8 @@
 
     <script type="text/javascript">
 
+      
+
         $('#fach').click(function () {
             show('Fach')
         });
@@ -71,7 +62,7 @@
             switch (param) {
 
                 case 'Fach':
-                    Url = Url + "faches/create"
+                    Url = Url + "faches/index"
                     break;
 
                 default:
