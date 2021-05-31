@@ -27,9 +27,9 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
         private DoctorRepository doctorRepository;
         private KlinikServicesRepository servicesRepository;
 
-
+        private EducationRepository educationRepository;
         private UserRepository userRepository;
-
+        private SexRepository sexRepository;
 
         public FachRepository FachRepository
         {
@@ -46,6 +46,34 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
 
         }
 
+        public EducationRepository EducationRepository
+        {
+            get
+            {
+
+                if (educationRepository == null)
+                {
+                    educationRepository = new EducationRepository(_maindbcontext);
+                }
+
+                return educationRepository;
+            }
+        }
+
+        public SexRepository SexRepository
+        {
+            get
+            {
+
+                if (sexRepository == null)
+                {
+                    sexRepository = new SexRepository(_maindbcontext);
+                }
+                return sexRepository;
+            }
+        }
+
+
         public DoctorRepository DoctorRepository
         {
             get
@@ -60,7 +88,7 @@ namespace Innobedded.KrankenHause.Domain.UnitOfWork
 
         public KlinikServicesRepository klinikServicesRepository
         {
-            get 
+            get
             {
                 if (servicesRepository == null)
                 {
