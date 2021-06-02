@@ -32,10 +32,9 @@
 
         </div>
 
-        <fieldset id="AllContent">
-        </fieldset>
 
-        <iframe width="890" height="480" style="overflow-y: scroll;" src="/admin/faches/index"
+
+        <iframe id="AllContent" width="890" height="480" style="overflow-y: scroll;" src=""
                 frameborder="0" allowfullscreen>
         </iframe>
     </div>
@@ -50,33 +49,44 @@
 
     <script type="text/javascript">
 
-      
+        function SetFrame(data) {
 
-        $('#fach').click(function () {
-            show('Fach')
-        });
-
-        function show(param) {
-            //   alert("HASAN");
-            var Url = "/admin/";
-            switch (param) {
-
-                case 'Fach':
-                    Url = Url + "faches/index"
+            switch (data) {
+                case 'fach':
+                    $('#AllContent').attr('src',"/admin/faches/index");
                     break;
-
                 default:
-                    Url = Url + "faches/create"
-
+                    $('#AllContent').attr('src',"");
             }
-
-            $(document).ready(function () {
-                $.get(Url, { input: param }, function (data) {
-                    $('#AllContent').html(data);
-                });
-
-            });
+            
+        
         }
+
+        //$('#fach').click(function () {
+        //    show('Fach')
+        //});
+
+        //function show(param) {
+        //    //   alert("HASAN");
+        //    var Url = "/admin/";
+        //    switch (param) {
+
+        //        case 'Fach':
+        //            Url = Url + "faches/index"
+        //            break;
+
+        //        default:
+        //            Url = Url + "faches/create"
+
+        //    }
+
+        //    $(document).ready(function () {
+        //        $.get(Url, { input: param }, function (data) {
+        //            $('#AllContent').html(data);
+        //        });
+
+        //    });
+        //}
     </script>
 
 
